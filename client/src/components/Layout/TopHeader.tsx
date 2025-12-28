@@ -13,6 +13,8 @@ export default function TopHeader() {
       <div className="flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Compass className="w-9 h-9 text-primary animate-pulse" />
+          {/* <img className="w-10 h-10" src="favicon.jpeg">
+          </img> */}
           <h1 className="text-2xl font-bold tracking-wide text-foreground">
             {WEBSITE_NAME}
           </h1>

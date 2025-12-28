@@ -4,7 +4,9 @@ export default function QuickContact() {
   return (
     <div className="mt-8 space-y-4 px-2">
         {QUICK_CONTACT.map((contact) => (
-      <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-border/50">
+      <div 
+      key = {contact.id}
+      className="flex items-center gap-4 p-4 bg-white rounded-xl border border-border/50">
         <div className="bg-secondary p-2 rounded-full text-primary">
           <contact.icon className="w-5 h-5" />
         </div>

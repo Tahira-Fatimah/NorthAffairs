@@ -14,7 +14,7 @@ export default function TopDestinations() {
         {/* Vertically stacked container */}
         <div className="flex flex-col gap-6">
           {TOP_DESTINATIONS.map((card, idx) => (
-            <Link href={`/destination/${card.id}`}>
+            <Link key={card.id} href={`/destination/${card.id}`}>
               <TopDestinationCard title={card.title} images={card.images} />
             </Link>
           ))}

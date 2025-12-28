@@ -37,6 +37,6 @@ export const TOP_DESTINATIONS = [
   {
     id: 1,
     title: "Skardu, Gilgit-Baltistan",
-    images: ["/skardu.webp", "/deosai.JPG", "/khaplu_fort.JPG", "/sadpara.WEBP", "/shigar_fort.WEBP", "/upper_kachura.JPG", "/lower_kachura.JPG", "boating.WEBP", "sarfranga.JPG"],
+    images: ["/skardu.webp", "/deosai.JPG", "/khaplu_fort.JPG", "/sadpara.WEBP", "/shigar_fort.WEBP", "/upper_kachura.JPG", "boating.WEBP", "sarfranga.JPG"],
   }
 ];

@@ -4,7 +4,7 @@ import { z } from "zod";
  * Trip schema for static data
  */
 export const tripSchema = z.object({
-  id: z.number(),
+  id: z.string(),
   title: z.string(),
   description: z.string(),
   startDate: z.string(),
@@ -26,17 +26,29 @@ export const contactRequestSchema = z.object({
 });
 
 export const topActivitiesSchema = z.object({
-  id: z.number(),
-  destinationId: z.number(),
+  id: z.string(),
+  destinationId: z.string(),
+  description: z.string(),
   title: z.string(),
   image: z.string(),
+  quickInfo: z.object({
+    bestTime: z.string(),
+    idealFor: z.array(z.string()),
+    duration: z.string(),
+  }),
 });
 
 export const topTouristAttractionsSchema = z.object({
-  id: z.number(),
-  destinationId: z.number(),
+  id: z.string(),
+  destinationId: z.string(),
+  description: z.string(),
   title: z.string(),
   image: z.string(),
+  quickInfo: z.object({
+    bestTime: z.string(),
+    idealFor: z.array(z.string()),
+    duration: z.string(),
+  }),
 });
 
 export type TopTouristAttractions = z.infer<typeof topTouristAttractionsSchema>;

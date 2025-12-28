@@ -10,10 +10,19 @@ export function useActivities() {
   });
 }
 
-export function useActivity(id: number) {
+export function useActivity(id: string) {
   return useQuery<TopActivities[]>({
     queryKey: ["activities"],
     queryFn: () => Promise.resolve(TOP_ACTIVITIES.filter(activity => activity.destinationId === id)),
+    enabled: !!id,
+    staleTime: Infinity,
+  });
+}
+
+export function useActivityById(id: string) {
+  return useQuery<TopActivities | undefined>({
+    queryKey: ["activity", id],
+    queryFn: () => Promise.resolve(TOP_ACTIVITIES.find(activity => activity.id === id)),
     enabled: !!id,
     staleTime: Infinity,
   });

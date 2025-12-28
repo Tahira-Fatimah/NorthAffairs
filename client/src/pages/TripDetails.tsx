@@ -8,7 +8,7 @@ import { TripCard } from "@/components/Trip/TripCard";
 
 export default function TripDetails() {
   const [, params] = useRoute("/trip/:id");
-  const id = params ? parseInt(params.id) : 0;
+  const id = params ? params.id : "";
   const { data: trip, isLoading, isError } = useTrip(id);
 
   if (isLoading) {

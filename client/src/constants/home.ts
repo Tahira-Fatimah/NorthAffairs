@@ -1,4 +1,5 @@
 import { Phone, Shield, Star, Map } from "lucide-react";
+import { DESTINATION_IDS } from "./id";
 
 export const HERO_SECTION_HEADINGS = {
   subtitle: "Explore Pakistan",
@@ -35,7 +36,7 @@ export const WHY_BOOK_WITH_US_CARDS = [
 
 export const TOP_DESTINATIONS = [
   {
-    id: 1,
+    id: DESTINATION_IDS.SKARDU,
     title: "Skardu, Gilgit-Baltistan",
     images: ["/skardu.webp", "/deosai.JPG", "/khaplu_fort.JPG", "/sadpara.WEBP", "/shigar_fort.WEBP", "/upper_kachura.JPG", "boating.WEBP", "sarfranga.JPG"],
   }

@@ -12,10 +12,10 @@ export function useTrips() {
 }
 
 // Hook to fetch a single trip by ID (now using static data)
-export function useTrip(id: number) {
-  return useQuery<Trip | null>({
+export function useTrip(id: string) {
+  return useQuery<Trip | undefined>({
     queryKey: ["trip", id],
-    queryFn: () => Promise.resolve(getTripById(id) || null),
+    queryFn: () => Promise.resolve(getTripById(id)),
     enabled: !!id,
     staleTime: Infinity, // Static data never changes
   });

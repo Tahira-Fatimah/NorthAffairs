@@ -1,16 +1,16 @@
 import { useParams } from "wouter";
 import { Loader, Play } from "lucide-react";
-import { Section } from "@/components/Destination/Section";
+import { Section } from "@/components/Destination/TourismSection";
 import { useTrip } from "@/hooks/use-trips";
 import { useActivities, useActivity } from "@/hooks/use-activities";
 import { useTopAttraction } from "@/hooks/use-top-attractions";
 import Error from "@/components/Error";
 export default function Destination() {
   const { id } = useParams(); // destination id
-  const { data: trip, isLoading, isError } = useTrip(parseInt(id || "0"));
+  const { data: trip, isLoading, isError } = useTrip(id || "");
 
-  const { data: topTouristAttractions, isLoading: topTouristAttractionsLoading, isError: topTouristAttractionsError } = useTopAttraction(parseInt(id || "0"));
-  const { data: topActivities, isLoading: topActivitiesLoading, isError: topActivitiesError } = useActivity(parseInt(id || "0"));
+  const { data: topTouristAttractions, isLoading: topTouristAttractionsLoading, isError: topTouristAttractionsError } = useTopAttraction(id || "");
+  const { data: topActivities, isLoading: topActivitiesLoading, isError: topActivitiesError } = useActivity(id || "");
 
   return (
     <>  
@@ -45,6 +45,8 @@ export default function Destination() {
         {/* <h2 className="text-2xl font-bold text-center">{id}</h2> */}
         {/* 🏞 TOP ATTRACTIONS */}
         <Section
+          type="tourism"
+          destinationId={id || ""}
           title="Top Tourist Attractions"
           items={topTouristAttractions || []}
           />
@@ -61,6 +63,8 @@ export default function Destination() {
         /> */}
 
         <Section
+          type="activity"
+          destinationId={id || ""}
           title="Top Activities"
           items={topActivities || []}
         />

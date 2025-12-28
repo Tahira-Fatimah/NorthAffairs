@@ -10,6 +10,7 @@ import Contact from "@/pages/Contact";
 import TripDetails from "@/pages/TripDetails";
 import NotFound from "@/pages/not-found";
 import Destination from "@/pages/Destination";
+import DestinationDetail from "@/pages/DestinationDetail";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
         <Route path="/contact" component={Contact} />
         <Route path="/trip/:id" component={TripDetails} />
         <Route path="/destination/:id" component={Destination} />
+        <Route path="/destination/:id/:activityId?activity=activity" component={DestinationDetail} />
         <Route component={NotFound} />
       </Switch>
     </Layout>

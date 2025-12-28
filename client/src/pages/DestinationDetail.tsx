@@ -68,12 +68,12 @@ export default function DestinationDetail() {
       </div>
 
       {/* Content Section */}
-      <div className="max-w-6xl mx-auto px-6 py-12">
+      <div className="max-w-6xl mx-auto px-6 py-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Description */}
           <div className="md:col-span-2 space-y-4">
-            <h2 className="text-2xl font-semibold text-foreground">
-              {activity === "tourism" ? "About this place" : "About this activity"}
+            <h2 className="text-2xl font-semibold text-foreground my-2">
+              <i>{attraction?.headline}</i>
             </h2>
             <p className="text-muted-foreground leading-relaxed">
               {attraction.description}

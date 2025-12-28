@@ -29,6 +29,7 @@ export const topActivitiesSchema = z.object({
   id: z.string(),
   destinationId: z.string(),
   description: z.string(),
+  headline: z.string().optional(),
   title: z.string(),
   image: z.string(),
   quickInfo: z.object({
@@ -42,6 +43,7 @@ export const topTouristAttractionsSchema = z.object({
   id: z.string(),
   destinationId: z.string(),
   description: z.string(),
+  headline: z.string().optional(),
   title: z.string(),
   image: z.string(),
   quickInfo: z.object({

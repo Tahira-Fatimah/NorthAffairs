@@ -73,7 +73,7 @@ export default function DestinationDetail() {
           {/* Description */}
           <div className="md:col-span-2 space-y-4">
             <h2 className="text-2xl font-semibold text-foreground">
-              About this place
+              {activity === "tourism" ? "About this place" : "About this activity"}
             </h2>
             <p className="text-muted-foreground leading-relaxed">
               {attraction.description}

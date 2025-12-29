@@ -10,7 +10,7 @@ export const SOCIAL_LINKS = [
   {
     name: "Instagram",
     icon: Instagram,
-    href: "https://www.instagram.com/the_north_affairs?igsh=MW43dHpqZGFzdW9lNA%3D%3D&utm_source=qr",
+    href: "https://www.instagram.com/thenorthaffairs?igsh=MW43dHpqZGFzdW9lNA%3D%3D&utm_source=qr",
     ariaLabel: "Follow us on Instagram",
   }
 ];

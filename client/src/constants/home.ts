@@ -3,7 +3,7 @@ import { DESTINATION_IDS } from "./id";
 
 export const HERO_SECTION_HEADINGS = {
   subtitle: "Explore Pakistan",
-  title: "Art of Traveling",
+  title: "Art of Travelling",
   title_highlight: "North",
   description: "Redefining premium travel experiences in Pakistan",
 };
